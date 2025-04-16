@@ -107,6 +107,11 @@ mod game_lobby {
         pub fn get_players(&self) -> Vec<AccountId> {
             self.players.clone()
         }
+
+        #[ink(message)]
+        pub fn get_state(&self) -> LobbyState {
+            self.state
+        }
     }
 
 
